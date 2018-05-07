@@ -1,0 +1,16 @@
+{
+  "name": "@f9software/collection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "node jasmine.js"
+  },
+  "keywords": ["collection", "map", "array"],
+  "author": "Iulian Ilea",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^2.8.7",
+    "jasmine": "^3.1.0"
+  }
+}
