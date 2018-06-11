@@ -4,13 +4,19 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "tsc": "./node_modules/.bin/tsc -p ./tsconfig.json",
     "test": "node jasmine.js"
   },
-  "keywords": ["collection", "map", "array"],
+  "keywords": [
+    "collection",
+    "map",
+    "array"
+  ],
   "author": "Iulian Ilea",
   "license": "ISC",
   "devDependencies": {
     "@types/jasmine": "^2.8.7",
-    "jasmine": "^3.1.0"
+    "jasmine": "^3.1.0",
+    "typescript": "^2.9.1"
   }
 }

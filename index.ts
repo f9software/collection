@@ -50,7 +50,7 @@ export class Collection<T> {
         return this.items[index];
     }
 
-    public get(key: string): T {
+    public get(key: string): T | undefined {
         const index = this.keys.indexOf(key);
 
         if (index > -1) {

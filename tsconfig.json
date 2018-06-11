@@ -6,7 +6,7 @@
     "noImplicitAny": true,
     "sourceMap": true,
 //    "jsx": "react",
-    "types": ["node"]
+    "strict": true
   },
   "exclude": [
     "node_modules"
