@@ -8,8 +8,10 @@ export class Collection<T> {
 
     private keys: string[] = [];
 
-    public constructor(private getKey: (item: T) => string) {
+    private getKey: ((item: T) => string) | undefined;
 
+    public constructor(getKey: (item: T) => string) {
+        this.getKey = getKey;
     }
 
     public get length(): number {
@@ -26,7 +28,7 @@ export class Collection<T> {
 
     public insert(index: number, item: T, key?: string) {
         if (!key) {
-            key = this.getKey(item);
+            key = this.getKey!(item);
         }
 
         this.items.splice(index, 0, item);
@@ -67,7 +69,8 @@ export class Collection<T> {
     }
 
     public clear() {
-        this.items.length = 0;
-        this.keys.length = 0;
+        this.items = [];
+        this.keys = [];
+        this.getKey = undefined;
     }
 }
